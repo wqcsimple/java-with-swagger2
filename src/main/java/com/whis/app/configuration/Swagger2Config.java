@@ -1,22 +1,3 @@
-## JAVA Api Base
-> java Api 基础库，会把一些常用的方法和最佳实例进行封装
-
-
-### 加入Swagger2 自动生成文档
-
-#### 1. 配置方法
-
-`build.gradle`加入以下包
-```
-    // swagger2 文档
-    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.8.0'
-    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.8.0'
-```
-
-#### 2. 配置文件
-
-```java
-
 package com.whis.app.configuration;
 
 import org.springframework.context.annotation.Bean;
@@ -30,7 +11,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 
 @Configuration
 public class Swagger2Config {
-
+    
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -50,9 +31,3 @@ public class Swagger2Config {
                 .build();
     }
 }
-
-```
-
-#### 3. 访问地址
-
-`http://localhost:8080/swagger-ui.html`

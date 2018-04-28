@@ -39,6 +39,11 @@ repositories {
 
 dependencies {
 
+    // swagger2 文档
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.8.0'
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.8.0'
+
+
     // base
     compile group: 'com.jayway.jsonpath', name: 'json-path', version: '2.4.0'
     compile 'com.google.code.gson:gson:2.8.2'
